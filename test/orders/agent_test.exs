@@ -1,10 +1,9 @@
 defmodule AgentTest do
   use ExUnit.Case
 
-  alias Exlivery.Orders.Agent, as: OrderAgent
-  alias Exlivery.Orders.{Order, Item}
-
   import Exlivery.Factory
+
+  alias Exlivery.Orders.Agent, as: OrderAgent
 
   describe "save/1" do
     test "saves the order" do
@@ -32,7 +31,7 @@ defmodule AgentTest do
 
       expected_response = {:ok, order}
 
-      expected_response = assert response == expected_response
+      assert assert response == expected_response
     end
 
     test "when the order is not found, returns an error" do
